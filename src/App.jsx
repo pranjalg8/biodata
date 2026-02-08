@@ -388,7 +388,7 @@ function App() {
           <div className="decorative-divider">
             <span className="divider-ornament">✦</span>
           </div>
-          <p className="note">This biodata has been prepared as per astrological and family records. All details are accurate as of February 2026.</p>
+
           <div className="decorative-border bottom"></div>
         </footer>
       </div>
