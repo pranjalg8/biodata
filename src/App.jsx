@@ -393,11 +393,6 @@ function App() {
         </footer>
       </div>
 
-      {/* Print Button */}
-      <button className="print-btn" onClick={handlePrint}>
-        <span>🖨️</span> Print / Save as PDF
-      </button>
-
       {/* Lightbox */}
       <Lightbox image={lightboxImage} onClose={closeLightbox} />
     </>
