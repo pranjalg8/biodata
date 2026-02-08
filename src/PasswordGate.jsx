@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Input, Button, CircularProgress } from '@heroui/react'
 import { useAuth } from './AuthContext'
 import './App.css'
 
@@ -26,7 +27,13 @@ function PasswordGate({ children }) {
         return (
             <div className="password-gate">
                 <div className="password-container">
-                    <div className="loading-spinner"></div>
+                    <div className="flex justify-center items-center py-12">
+                        <CircularProgress
+                            size="lg"
+                            color="danger"
+                            aria-label="Loading..."
+                        />
+                    </div>
                 </div>
             </div>
         )
@@ -52,28 +59,37 @@ function PasswordGate({ children }) {
                 </div>
 
                 <form onSubmit={handleSubmit} className="password-form">
-                    <div className="input-group">
-                        <label htmlFor="password">Enter Access Code</label>
-                        <input
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            placeholder="••••••••"
-                            autoFocus
-                            disabled={isSubmitting}
-                        />
-                    </div>
+                    <Input
+                        type="password"
+                        label="Enter Access Code"
+                        placeholder="••••••••"
+                        value={password}
+                        onValueChange={setPassword}
+                        isDisabled={isSubmitting}
+                        autoFocus
+                        variant="bordered"
+                        size="lg"
+                        color="danger"
+                        classNames={{
+                            label: "text-burgundy-DEFAULT font-semibold",
+                            input: "text-lg",
+                            inputWrapper: "border-gold-DEFAULT hover:border-burgundy-DEFAULT focus-within:!border-burgundy-DEFAULT"
+                        }}
+                        isInvalid={!!error}
+                        errorMessage={error}
+                    />
 
-                    {error && <p className="error-message">{error}</p>}
-
-                    <button
+                    <Button
                         type="submit"
-                        className="submit-btn"
-                        disabled={isSubmitting || !password}
+                        color="danger"
+                        size="lg"
+                        isDisabled={!password}
+                        isLoading={isSubmitting}
+                        className="w-full mt-6 bg-gradient-to-r from-burgundy-DEFAULT to-burgundy-light font-semibold text-lg"
+                        radius="full"
                     >
                         {isSubmitting ? 'Verifying...' : 'View Biodata'}
-                    </button>
+                    </Button>
 
                     <p className="gate-note">
                         This biodata is password protected for privacy.
