@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Card, CardBody } from '@heroui/react'
+import GalleryModal from './GalleryModal'
 import './App.css'
 
 // Biodata data
@@ -347,17 +348,13 @@ function App() {
           <div className="section-header">
             <h3><span className="icon">📸</span> Photo Gallery</h3>
           </div>
-          <div className="gallery-grid">
-            <div className="gallery-item" onClick={() => openLightbox('./images/kurta-photo.jpg')}>
-              <img src="./images/kurta-photo.jpg" alt="Pranjal in traditional kurta" />
-            </div>
-            <div className="gallery-item" onClick={() => openLightbox('./images/profile.jpeg')}>
-              <img src="./images/profile.jpeg" alt="Pranjal at Golden Bridge" />
-            </div>
-            <div className="gallery-item" onClick={() => openLightbox('./images/casual-photo.jpg')}>
-              <img src="./images/casual-photo.jpg" alt="Pranjal casual" />
-            </div>
-          </div>
+          <GalleryModal
+            images={[
+              { src: './images/kurta-photo.jpg', alt: 'Pranjal in traditional kurta' },
+              { src: './images/profile.jpeg', alt: 'Pranjal at Golden Bridge' },
+              { src: './images/casual-photo.jpg', alt: 'Pranjal casual' }
+            ]}
+          />
         </Section>
 
         {/* Contact Section */}
