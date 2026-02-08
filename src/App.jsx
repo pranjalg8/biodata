@@ -29,19 +29,21 @@ const biodataData = {
     father: {
       name: "Mr. Dinesh Chandra Gupta",
       occupation: "Head (Engineering & Projects)",
-      location: "Sector 4, Greater Noida West",
+      location: "Sector 4, Greater Noida West (Delhi NCR)",
+      hometown: "Mahoba",
       contact: "+91 9662549655"
     },
     mother: {
       name: "Mrs. Sushma Gupta",
       occupation: "M.A., L.L.B. | Homemaker",
-      location: "Khajuraho",
+      location: "Sector 4, Greater Noida West (Delhi NCR)",
+      hometown: "Khajuraho",
       contact: "+91 9662549610"
     },
     brother: {
       name: "Puru Gupta",
-      occupation: "B.Tech (CS) & M.Sc. (Physics) at BITS Pilani",
-      location: "Interning at Apple, Graduating 2026"
+      occupation: "B.Tech (CS) & M.Sc. (Physics) at BITS Pilani (Pilani Campus)",
+      location: "Interning at Apple (Hyderabad), Graduating 2026"
     },
     grandparents: {
       paternal: "Mr. Bihari Lal Gupta (Dhanwantari Medical, Mahoba) & Lt. Smt. Vigyan Devi Gupta",
