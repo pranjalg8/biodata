@@ -44,8 +44,8 @@ const biodataData = {
       location: "Interning at Apple, Graduating 2026"
     },
     grandparents: {
-      paternal: "Mr. Bihari Lal Gupta & Lt. Smt. Vigyan Devi Gupta (Dhanwantari Medical, Mahoba)",
-      maternal: "Lt. Babu Lal Gupta & Mrs. Jamwati Gupta (Chief Engineer MPEB, Khajuraho)"
+      paternal: "Mr. Bihari Lal Gupta (Dhanwantari Medical, Mahoba) & Lt. Smt. Vigyan Devi Gupta",
+      maternal: "Lt. Babu Lal Gupta (Chief Engineer, MPEB) & Mrs. Jamwati Gupta, Khajuraho"
     }
   },
   astrology: {
