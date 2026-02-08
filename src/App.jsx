@@ -291,6 +291,10 @@ function App() {
               </div>
             </div>
           </div>
+
+          <a href="#/extended-family" className="extended-family-link">
+            View Extended Family Details →
+          </a>
         </Section>
 
         {/* Astrological Details */}

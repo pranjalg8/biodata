@@ -871,4 +871,168 @@ body {
   .profile-name h2 {
     font-size: 1.8rem;
   }
+
+  .extended-family-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Extended Family Link ===== */
+.extended-family-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: var(--gradient-burgundy);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extended-family-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(139, 13, 46, 0.3);
+}
+
+/* ===== Extended Family Page ===== */
+.page-nav {
+  padding: 15px 40px;
+  background: var(--cream);
+}
+
+.nav-link {
+  color: var(--primary-burgundy);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold);
+}
+
+.page-title-section {
+  text-align: center;
+  padding: 30px 40px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--primary-burgundy);
+  margin-bottom: 5px;
+}
+
+.page-subtitle {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
+.extended-section {
+  opacity: 1;
+  transform: none;
+}
+
+.extended-subsection {
+  margin-bottom: 30px;
+}
+
+.subsection-title {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.extended-family-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.extended-family-card {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: var(--cream);
+  border-radius: 12px;
+  border: 1px solid var(--cream-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extended-family-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.family-member-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.family-member-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.member-relation {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-burgundy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.member-spouse {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+}
+
+.member-occupation {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+}
+
+.member-occupation.spouse-job {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.member-location {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 5px;
+}
+
+.back-to-main {
+  display: inline-block;
+  color: var(--primary-burgundy);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 2px solid var(--primary-burgundy);
+  border-radius: 50px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.back-to-main:hover {
+  background: var(--primary-burgundy);
+  color: var(--white);
 }
