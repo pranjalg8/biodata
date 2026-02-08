@@ -24,7 +24,7 @@ const biodataData = {
     degree: "B.Tech (Computer Science) & M.Sc. (Mathematics)",
     institution: "BITS Pilani, Hyderabad Campus"
   },
-  about: "Pranjal is a soft-spoken, caring, and family-oriented person with progressive values. He is affectionate, kind-hearted, and trustworthy with a pleasing personality. Professionally, he stands out as a leader in his field.",
+  about: "Pranjal is a warm, grounded person who values family, meaningful relationships, and personal growth. He's known for his calm demeanor, reliability, and genuine care for the people around him.",
   family: {
     father: {
       name: "Mr. Dinesh Chandra Gupta",
