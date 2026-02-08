@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ===== CSS Variables & Base Styles ===== */
 :root {
   --primary-burgundy: #8B0D2E;
