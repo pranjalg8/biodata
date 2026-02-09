@@ -28,11 +28,7 @@ function PasswordGate({ children }) {
             <div className="password-gate">
                 <div className="password-container">
                     <div className="flex justify-center items-center py-12">
-                        <CircularProgress
-                            size="lg"
-                            color="danger"
-                            aria-label="Loading..."
-                        />
+                        <div className="loading-spinner"></div>
                     </div>
                 </div>
             </div>
@@ -59,37 +55,28 @@ function PasswordGate({ children }) {
                 </div>
 
                 <form onSubmit={handleSubmit} className="password-form">
-                    <Input
-                        type="password"
-                        label="Enter Access Code"
-                        placeholder="••••••••"
-                        value={password}
-                        onValueChange={setPassword}
-                        isDisabled={isSubmitting}
-                        autoFocus
-                        variant="bordered"
-                        size="lg"
-                        color="danger"
-                        classNames={{
-                            label: "text-burgundy-DEFAULT font-semibold",
-                            input: "text-lg",
-                            inputWrapper: "border-gold-DEFAULT hover:border-burgundy-DEFAULT focus-within:!border-burgundy-DEFAULT"
-                        }}
-                        isInvalid={!!error}
-                        errorMessage={error}
-                    />
+                    <div className="form-group">
+                        <label htmlFor="password-input">Enter Access Code</label>
+                        <input
+                            id="password-input"
+                            type="password"
+                            placeholder="••••••••"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            disabled={isSubmitting}
+                            autoFocus
+                            className={`password-input ${error ? 'error' : ''}`}
+                        />
+                        {error && <p className="error-message">{error}</p>}
+                    </div>
 
-                    <Button
+                    <button
                         type="submit"
-                        color="danger"
-                        size="lg"
-                        isDisabled={!password}
-                        isLoading={isSubmitting}
-                        className="w-full mt-6 bg-gradient-to-r from-burgundy-DEFAULT to-burgundy-light font-semibold text-lg"
-                        radius="full"
+                        disabled={!password || isSubmitting}
+                        className="submit-btn"
                     >
                         {isSubmitting ? 'Verifying...' : 'View Biodata'}
-                    </Button>
+                    </button>
 
                     <p className="gate-note">
                         This biodata is password protected for privacy.

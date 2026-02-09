@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Card, CardBody } from '@heroui/react'
+
 import GalleryModal from './GalleryModal'
 import './App.css'
 
@@ -365,6 +365,7 @@ function App() {
               { src: './images/profile.jpeg', alt: 'Pranjal at Golden Bridge' },
               { src: './images/casual-photo.jpg', alt: 'Pranjal casual' }
             ]}
+            onImageClick={openLightbox}
           />
         </Section>
 
