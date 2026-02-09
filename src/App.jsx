@@ -63,7 +63,8 @@ const biodataData = {
   contact: {
     father: "+91 9662549655",
     mother: "+91 9662549610",
-    email: "dinesh4171@gmail.com"
+    self: "+91 9680891277",
+    email: "pranjalg8@gmail.com"
   }
 }
 
@@ -376,6 +377,13 @@ function App() {
               <div className="contact-info">
                 <span className="contact-label">Mother</span>
                 <span className="contact-value">{biodataData.contact.mother}</span>
+              </div>
+            </a>
+            <a href={`tel:${biodataData.contact.self}`} className="contact-item">
+              <span className="contact-icon">📱</span>
+              <div className="contact-info">
+                <span className="contact-label">Pranjal (Self)</span>
+                <span className="contact-value">{biodataData.contact.self}</span>
               </div>
             </a>
             <a href={`mailto:${biodataData.contact.email}`} className="contact-item">
