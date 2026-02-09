@@ -249,35 +249,35 @@ function App() {
           </div>
 
           <div className="family-grid">
-            <Card className="bg-cream-DEFAULT border border-cream-dark hover:shadow-lg transition-all">
-              <CardBody className="text-center p-5">
-                <div className="text-4xl mb-3">👨</div>
-                <span className="text-xs font-semibold text-burgundy-DEFAULT uppercase tracking-wider">Father</span>
-                <p className="font-semibold text-gray-800 mt-1">{biodataData.family.father.name}</p>
-                <p className="text-sm text-gray-600">{biodataData.family.father.occupation}</p>
-                <p className="text-xs text-gray-500">{biodataData.family.father.location}</p>
-              </CardBody>
-            </Card>
+            <div className="family-card">
+              <div className="family-icon">👨</div>
+              <div className="family-info">
+                <span className="relation">Father</span>
+                <span className="name">{biodataData.family.father.name}</span>
+                <span className="occupation">{biodataData.family.father.occupation}</span>
+                <span className="location">{biodataData.family.father.location}</span>
+              </div>
+            </div>
 
-            <Card className="bg-cream-DEFAULT border border-cream-dark hover:shadow-lg transition-all">
-              <CardBody className="text-center p-5">
-                <div className="text-4xl mb-3">👩</div>
-                <span className="text-xs font-semibold text-burgundy-DEFAULT uppercase tracking-wider">Mother</span>
-                <p className="font-semibold text-gray-800 mt-1">{biodataData.family.mother.name}</p>
-                <p className="text-sm text-gray-600">{biodataData.family.mother.occupation}</p>
-                <p className="text-xs text-gray-500">{biodataData.family.mother.location}</p>
-              </CardBody>
-            </Card>
+            <div className="family-card">
+              <div className="family-icon">👩</div>
+              <div className="family-info">
+                <span className="relation">Mother</span>
+                <span className="name">{biodataData.family.mother.name}</span>
+                <span className="occupation">{biodataData.family.mother.occupation}</span>
+                <span className="location">{biodataData.family.mother.location}</span>
+              </div>
+            </div>
 
-            <Card className="bg-cream-DEFAULT border border-cream-dark hover:shadow-lg transition-all">
-              <CardBody className="text-center p-5">
-                <div className="text-4xl mb-3">👦</div>
-                <span className="text-xs font-semibold text-burgundy-DEFAULT uppercase tracking-wider">Brother</span>
-                <p className="font-semibold text-gray-800 mt-1">{biodataData.family.brother.name}</p>
-                <p className="text-sm text-gray-600">{biodataData.family.brother.occupation}</p>
-                <p className="text-xs text-gray-500">{biodataData.family.brother.location}</p>
-              </CardBody>
-            </Card>
+            <div className="family-card">
+              <div className="family-icon">👦</div>
+              <div className="family-info">
+                <span className="relation">Brother</span>
+                <span className="name">{biodataData.family.brother.name}</span>
+                <span className="occupation">{biodataData.family.brother.occupation}</span>
+                <span className="location">{biodataData.family.brother.location}</span>
+              </div>
+            </div>
           </div>
 
           <div className="grandparents-summary">
