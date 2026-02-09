@@ -154,103 +154,97 @@ function App() {
           </div>
         </header>
 
-        {/* Profile Section */}
-        <div className="intro-grid">
-          <div className="intro-left">
-            {/* Profile Section */}
-            <section className="profile-section">
-              <div className="profile-image-container" onClick={() => openLightbox('./images/main-photo.jpg')}>
-                <div className="image-frame">
-                  <img src="./images/main-photo.jpg" alt="Pranjal Gupta" className="profile-image" />
-                </div>
-                <div className="decorative-corner top-left"></div>
-                <div className="decorative-corner top-right"></div>
-                <div className="decorative-corner bottom-left"></div>
-                <div className="decorative-corner bottom-right"></div>
-              </div>
-              <div className="profile-name">
-                <h2>{biodataData.personal.name}</h2>
-                <p className="tagline">{biodataData.personal.nameHindi}</p>
-              </div>
-            </section>
-
-
+        {/* Profile Section - Centered */}
+        <section className="profile-section">
+          <div className="profile-image-container" onClick={() => openLightbox('./images/main-photo.jpg')}>
+            <div className="image-frame">
+              <img src="./images/main-photo.jpg" alt="Pranjal Gupta" className="profile-image" />
+            </div>
+            <div className="decorative-corner top-left"></div>
+            <div className="decorative-corner top-right"></div>
+            <div className="decorative-corner bottom-left"></div>
+            <div className="decorative-corner bottom-right"></div>
           </div>
-
-          <div className="intro-right">
-            {/* About Section - Moved to top of right column */}
-            <Section className="about-section compact">
-              <div className="section-header">
-                <h3><span className="icon">✨</span> About Pranjal</h3>
-              </div>
-              <div className="about-content">
-                <p>{biodataData.about}</p>
-              </div>
-            </Section>
-
-            {/* Education & Career */}
-            <Section className="education-career compact">
-              <div className="section-header">
-                <h3><span className="icon">🎓</span> Education & Career</h3>
-              </div>
-              <div className="career-highlight">
-                <div className="company-badge">
-                  <img src="./images/amazon-logo.png" alt="Amazon" className="company-logo-img" />
-                  <div className="company-info">
-                    <span className="position">{biodataData.career.position}</span>
-                    <span className="company">{biodataData.career.company}, {biodataData.career.location}</span>
-                    <span className="tenure">Since {biodataData.career.since}</span>
-                  </div>
-                </div>
-              </div>
-              <div className="education-box">
-                <div className="education-item">
-                  <img src="./images/bits-logo.png" alt="BITS Pilani" className="institution-logo" />
-                  <div className="education-details">
-                    <span className="degree">{biodataData.education.degree}</span>
-                    <span className="institution">{biodataData.education.institution}</span>
-                  </div>
-                </div>
-              </div>
-            </Section>
-
-            {/* Personal Details */}
-            <Section className="personal-details compact">
-              <div className="section-header">
-                <h3><span className="icon">👤</span> Personal Details</h3>
-              </div>
-              <div className="details-grid">
-                <div className="detail-item">
-                  <span className="label">Date of Birth</span>
-                  <span className="value">{biodataData.personal.dob}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="label">Time of Birth</span>
-                  <span className="value">{biodataData.personal.timeOfBirth}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="label">Place of Birth</span>
-                  <span className="value">{biodataData.personal.placeOfBirth}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="label">Height</span>
-                  <span className="value">{biodataData.personal.height}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="label">Complexion</span>
-                  <span className="value">{biodataData.personal.complexion}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="label">Diet</span>
-                  <span className="value">{biodataData.personal.diet}</span>
-                </div>
-                <div className="detail-item full-width">
-                  <span className="label">Hobbies</span>
-                  <span className="value">{biodataData.personal.hobbies}</span>
-                </div>
-              </div>
-            </Section>
+          <div className="profile-name">
+            <h2>{biodataData.personal.name}</h2>
+            <p className="tagline">{biodataData.personal.nameHindi}</p>
           </div>
+        </section>
+
+        {/* About Section - Full Width */}
+        <Section className="about-section">
+          <div className="section-header">
+            <h3><span className="icon">✨</span> About Pranjal</h3>
+          </div>
+          <div className="about-content">
+            <p>{biodataData.about}</p>
+          </div>
+        </Section>
+
+        {/* Personal Details & Education/Career - Two Columns */}
+        <div className="two-column-grid">
+          {/* Personal Details - Left */}
+          <Section className="personal-details">
+            <div className="section-header">
+              <h3><span className="icon">👤</span> Personal Details</h3>
+            </div>
+            <div className="details-grid">
+              <div className="detail-item">
+                <span className="label">Date of Birth</span>
+                <span className="value">{biodataData.personal.dob}</span>
+              </div>
+              <div className="detail-item">
+                <span className="label">Time of Birth</span>
+                <span className="value">{biodataData.personal.timeOfBirth}</span>
+              </div>
+              <div className="detail-item">
+                <span className="label">Place of Birth</span>
+                <span className="value">{biodataData.personal.placeOfBirth}</span>
+              </div>
+              <div className="detail-item">
+                <span className="label">Height</span>
+                <span className="value">{biodataData.personal.height}</span>
+              </div>
+              <div className="detail-item">
+                <span className="label">Complexion</span>
+                <span className="value">{biodataData.personal.complexion}</span>
+              </div>
+              <div className="detail-item">
+                <span className="label">Diet</span>
+                <span className="value">{biodataData.personal.diet}</span>
+              </div>
+              <div className="detail-item full-width">
+                <span className="label">Hobbies</span>
+                <span className="value">{biodataData.personal.hobbies}</span>
+              </div>
+            </div>
+          </Section>
+
+          {/* Education & Career - Right */}
+          <Section className="education-career">
+            <div className="section-header">
+              <h3><span className="icon">🎓</span> Education & Career</h3>
+            </div>
+            <div className="career-highlight">
+              <div className="company-badge">
+                <img src="./images/amazon-logo.png" alt="Amazon" className="company-logo-img" />
+                <div className="company-info">
+                  <span className="position">{biodataData.career.position}</span>
+                  <span className="company">{biodataData.career.company}, {biodataData.career.location}</span>
+                  <span className="tenure">Since {biodataData.career.since}</span>
+                </div>
+              </div>
+            </div>
+            <div className="education-box">
+              <div className="education-item">
+                <img src="./images/bits-logo.png" alt="BITS Pilani" className="institution-logo" />
+                <div className="education-details">
+                  <span className="degree">{biodataData.education.degree}</span>
+                  <span className="institution">{biodataData.education.institution}</span>
+                </div>
+              </div>
+            </div>
+          </Section>
         </div>
 
         {/* Family Section */}
