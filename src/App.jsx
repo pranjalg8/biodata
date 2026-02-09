@@ -174,15 +174,7 @@ function App() {
               </div>
             </section>
 
-            {/* Moved Gallery Images - Left Column Filler */}
-            <div className="mini-gallery">
-              <div className="mini-gallery-item" onClick={() => openLightbox('./images/kurta-photo.jpg')}>
-                <img src="./images/kurta-photo.jpg" alt="Pranjal in traditional kurta" />
-              </div>
-              <div className="mini-gallery-item" onClick={() => openLightbox('./images/casual-photo.jpg')}>
-                <img src="./images/casual-photo.jpg" alt="Pranjal casual" />
-              </div>
-            </div>
+
           </div>
 
           <div className="intro-right">
@@ -369,7 +361,9 @@ function App() {
           </div>
           <GalleryModal
             images={[
+              { src: './images/kurta-photo.jpg', alt: 'Pranjal in traditional kurta' },
               { src: './images/profile.jpeg', alt: 'Pranjal at Golden Bridge' },
+              { src: './images/casual-photo.jpg', alt: 'Pranjal casual' }
             ]}
           />
         </Section>
