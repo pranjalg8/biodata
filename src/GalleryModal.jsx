@@ -27,13 +27,10 @@ function GalleryModal({ images }) {
                         className="gallery-item cursor-pointer"
                         onClick={() => openModal(image)}
                     >
-                        <Image
+                        <img
                             src={image.src}
                             alt={image.alt}
-                            className="w-full h-[280px] object-cover"
-                            radius="lg"
-                            shadow="sm"
-                            isZoomed
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                         />
                     </div>
                 ))}
