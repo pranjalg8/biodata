@@ -1197,3 +1197,101 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* ===== Intro Grid Layout ===== */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+  align-items: start;
+}
+
+.intro-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Compact Sections for Right Column */
+.section.compact {
+  margin-bottom: 0;
+  padding: 25px;
+}
+
+.section.compact .section-header {
+  margin-bottom: 15px;
+}
+
+.section.compact h3 {
+  font-size: 1.3rem;
+}
+
+/* Mini Gallery in Left Column */
+.mini-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.mini-gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-small);
+  transition: var(--transition);
+  cursor: pointer;
+  aspect-ratio: 3/4;
+  /* Changed to 3:4 for portrait photos */
+  border: 3px solid #fff;
+  background: var(--cream-dark);
+  /* Fallback */
+}
+
+.mini-gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+.mini-gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.5s ease;
+}
+
+.mini-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intro-left {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .intro-right {
+    width: 100%;
+  }
+
+  .mini-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
