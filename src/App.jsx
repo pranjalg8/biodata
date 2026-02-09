@@ -146,6 +146,7 @@ function App() {
           <div className="decorative-border top"></div>
           <div className="header-content">
             <div className="om-symbol">॥ श्री गणेशाय नमः ॥</div>
+            <img src="./images/ganpati-logo.png" alt="Ganpati" className="ganpati-logo" />
             <div className="decorative-divider">
               <span className="divider-ornament">✦</span>
             </div>
