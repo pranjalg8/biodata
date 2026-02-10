@@ -30,7 +30,7 @@ const biodataData = {
   family: {
     father: {
       name: "Mr. Dinesh Chandra Gupta",
-      occupation: "Head (Engineering & Projects)",
+      occupation: "VP (Engineering & Projects) at Vidya Polymers",
       location: "Sector 4, Greater Noida West (Delhi NCR)",
       hometown: "Mahoba",
       contact: "+91 9662549655"
