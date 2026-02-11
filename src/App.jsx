@@ -171,52 +171,52 @@ function App() {
           </div>
         </section>
 
-        {/* About Section - Full Width */}
-        <Section className="about-section">
+        {/* Personal Details - Full Width */}
+        <Section className="personal-details">
           <div className="section-header">
-            <h3><span className="icon">✨</span> About Pranjal</h3>
+            <h3><span className="icon">👤</span> Personal Details</h3>
           </div>
-          <div className="about-content">
-            <p>{biodataData.about}</p>
+          <div className="details-grid">
+            <div className="detail-item">
+              <span className="label">Date of Birth</span>
+              <span className="value">{biodataData.personal.dob}</span>
+            </div>
+            <div className="detail-item">
+              <span className="label">Time of Birth</span>
+              <span className="value">{biodataData.personal.timeOfBirth}</span>
+            </div>
+            <div className="detail-item">
+              <span className="label">Place of Birth</span>
+              <span className="value">{biodataData.personal.placeOfBirth}</span>
+            </div>
+            <div className="detail-item">
+              <span className="label">Height</span>
+              <span className="value">{biodataData.personal.height}</span>
+            </div>
+            <div className="detail-item">
+              <span className="label">Complexion</span>
+              <span className="value">{biodataData.personal.complexion}</span>
+            </div>
+            <div className="detail-item">
+              <span className="label">Diet</span>
+              <span className="value">{biodataData.personal.diet}</span>
+            </div>
+            <div className="detail-item full-width">
+              <span className="label">Hobbies</span>
+              <span className="value">{biodataData.personal.hobbies}</span>
+            </div>
           </div>
         </Section>
 
-        {/* Personal Details & Education/Career - Two Columns */}
+        {/* About & Education/Career - Side by Side */}
         <div className="two-column-grid">
-          {/* Personal Details - Left */}
-          <Section className="personal-details">
+          {/* About Pranjal - Left */}
+          <Section className="about-section">
             <div className="section-header">
-              <h3><span className="icon">👤</span> Personal Details</h3>
+              <h3><span className="icon">✨</span> About Pranjal</h3>
             </div>
-            <div className="details-grid">
-              <div className="detail-item">
-                <span className="label">Date of Birth</span>
-                <span className="value">{biodataData.personal.dob}</span>
-              </div>
-              <div className="detail-item">
-                <span className="label">Time of Birth</span>
-                <span className="value">{biodataData.personal.timeOfBirth}</span>
-              </div>
-              <div className="detail-item">
-                <span className="label">Place of Birth</span>
-                <span className="value">{biodataData.personal.placeOfBirth}</span>
-              </div>
-              <div className="detail-item">
-                <span className="label">Height</span>
-                <span className="value">{biodataData.personal.height}</span>
-              </div>
-              <div className="detail-item">
-                <span className="label">Complexion</span>
-                <span className="value">{biodataData.personal.complexion}</span>
-              </div>
-              <div className="detail-item">
-                <span className="label">Diet</span>
-                <span className="value">{biodataData.personal.diet}</span>
-              </div>
-              <div className="detail-item full-width">
-                <span className="label">Hobbies</span>
-                <span className="value">{biodataData.personal.hobbies}</span>
-              </div>
+            <div className="about-content">
+              <p>{biodataData.about}</p>
             </div>
           </Section>
 
